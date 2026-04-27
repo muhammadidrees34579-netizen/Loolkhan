@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOOL — Signature Perfume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">LOOL</div>
+      <a class="btn ghost" href="#discover">Discover</a>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="eyebrow">A fragrance crafted for wonder</p>
+      <h1>LOOL</h1>
+      <p class="lead">
+        Sparkling citrus opens into velvet rose and settles into warm amber woods.
+        A modern scent story, alive with movement.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#experience">Experience Notes</a>
+        <button class="btn ghost" id="toggleMode">Toggle Mood</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="discover" class="section container reveal">
+      <div>
+        <p class="section-label">Essence</p>
+        <h2>Three acts. One signature memory.</h2>
+      </div>
+      <div class="notes-grid" id="experience">
+        <article class="note-card" data-color="#ffd8a8">
+          <h3>Top Notes</h3>
+          <p>Bergamot, pink pepper, and pear blossom brighten the first impression.</p>
+        </article>
+        <article class="note-card" data-color="#ffb3c6">
+          <h3>Heart Notes</h3>
+          <p>Turkish rose and jasmine sambac bloom with a silky, luminous texture.</p>
+        </article>
+        <article class="note-card" data-color="#d9c5ff">
+          <h3>Base Notes</h3>
+          <p>Amber, sandalwood, and white musk create a smooth, lasting trail.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark reveal">
+      <div class="container split">
+        <div>
+          <p class="section-label">Interactive</p>
+          <h2>Blend your mood</h2>
+          <p class="lead-small">Use the slider to shift LOOL's aura from fresh daylight to midnight warmth.</p>
+        </div>
+        <div class="blend-card">
+          <label for="moodRange">Mood Intensity</label>
+          <input id="moodRange" type="range" min="0" max="100" value="45" />
+          <div class="meter">
+            <span>Fresh</span>
+            <div class="bar"><div id="barFill"></div></div>
+            <span>Warm</span>
+          </div>
+          <p id="moodText">Balanced bloom with sparkling elegance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <p class="section-label">Craftsmanship</p>
+      <h2>Designed in Paris. Remembered everywhere.</h2>
+      <p class="lead-small">
+        LOOL is formulated with ethically sourced ingredients and presented in a refillable bottle,
+        uniting artistry with mindful luxury.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>LOOL · Eau de Parfum · 50ml / 100ml</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
